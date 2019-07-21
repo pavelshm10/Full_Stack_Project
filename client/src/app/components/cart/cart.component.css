@@ -1,0 +1,24 @@
+div{
+    text-align:left;
+    margin-left: 5px;
+}
+
+footer{
+    text-align: left;
+    margin-left:10px;
+}
+
+a{
+    margin-left: 300px;
+    /* width:50%;
+    position: relative;
+    margin-right: 0px; */
+}
+
+/* span{
+    width:50%;
+    position: relative;
+    margin-left: 5px;
+} */
+
+

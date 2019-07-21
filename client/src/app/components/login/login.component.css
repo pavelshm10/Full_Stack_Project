@@ -1,0 +1,40 @@
+form{
+    text-align: left;
+}
+
+mat-form-field,mat-checkbox {
+    margin-left: 5px;
+    width: 300px;
+    font-size: x-large;
+}
+
+button{
+    /* margin-top:5px; */
+    margin-left: 5px;
+    font-size: x-large; 
+    border-radius: 5px;  
+}
+
+.ng-invalid.ng-touched:not(form) >input {
+    color: grey;
+}
+
+label,a{
+    margin-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+#btnLogin{
+    border: 1px solid grey;
+}
+
+span{
+    text-align: left;
+    position: absolute;
+    margin: 10px;
+}
+
+
+
+

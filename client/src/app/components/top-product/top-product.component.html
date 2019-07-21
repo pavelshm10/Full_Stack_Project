@@ -1,0 +1,13 @@
+<h2>Top Product: </h2>
+
+<div *ngIf="topProduct">
+    <h3>Name: {{ topProduct.name }}</h3>
+    <h3>Price: {{ topProduct.price }}</h3>
+    <h3>Stock: {{ topProduct.stock }}</h3>
+</div>
+
+<!-- <img *ngIf="!topProduct" width="200" src="/assets/images/loading.gif"> -->
+
+<div>
+    <mat-spinner *ngIf="!topProduct"></mat-spinner>
+</div>

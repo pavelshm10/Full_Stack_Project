@@ -1,0 +1,25 @@
+<form>
+    <div>Available products: {{totalProducts}}</div><br>
+    <div>Number of orders: {{totalOrders}}</div><br>
+    
+    <ng-container *ngIf="log" [ngSwitch]="status">
+        <p *ngSwitchCase="'openCart'">    
+            <label>Cart ID:&nbsp;</label>{{cart_id}}<br>
+            <label>Lasr update date:&nbsp;</label>{{date}}<br>
+            <label>Date:&nbsp;</label>{{currentDate | date:'dd MM yy'}}<br>
+            <label >Total Price:&nbsp;</label> {{totalPrice | currency:'ILS'}}
+        </p>
+
+        <p *ngSwitchCase="'lastOrder'">
+            <label>Customer ID:&nbsp;</label>{{ customerId }}<br>
+            <label>Cart ID:&nbsp;</label>{{ cartId }}<br>
+            <label>Shipping city:&nbsp;</label>{{ shippingCity }}<br>
+            <label>Shipping address:&nbsp;</label>{{ shippingAdress }}<br>
+            <label>Shipping date:&nbsp;</label>{{ shippingDate }}<br>
+            <label>Total price:&nbsp;</label>{{ finalPrice }}
+        </p>  
+        
+        <p *ngSwitchCase="'newCustomer'">Welcome, create your first cart</p>
+    </ng-container>
+</form>
+

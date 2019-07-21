@@ -1,0 +1,14 @@
+<app-heading>My Cart</app-heading>
+ 
+<div *ngFor="let i of itemsCart">
+    <label>Product Name: {{ i.productId.productName }}</label>
+    <label>price: {{ i.total }}</label>
+    <label>quantity: {{ i.amount | zeroSymbol:'No Stock' }}</label>
+    <br><br>
+</div>
+<br><br>    
+<footer>
+    <span >Total:{{total}}</span>
+    <a routerLink="/orders">Order</a>
+</footer>
+

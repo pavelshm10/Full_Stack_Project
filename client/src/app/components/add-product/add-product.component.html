@@ -1,0 +1,17 @@
+<form #myForm="ngForm">
+
+    <!-- <input #name="ngModel" required minlength="3" type="text" placeholder="Name..." [(ngModel)]="product.name" name="name">
+    <span *ngIf="name.errors?.required && name.touched">Missing product name.</span>
+    <span *ngIf="name.errors?.minlength && name.touched">Product name too short.</span>
+    <br><br>
+
+    <input #price="ngModel" required type="number" placeholder="Price..." [(ngModel)]="product.price" name="price">
+    <span *ngIf="price.invalid && price.touched">Missing unit price.</span>
+    <br><br> -->
+
+    <!-- <input #stock="ngModel" required type="number" placeholder="Stock..." [(ngModel)]="product.stock" name="stock"> -->
+    <br><br>
+
+    <button [disabled]="myForm.form.invalid" (click)="send()">Add Product</button>
+
+</form>

@@ -1,0 +1,45 @@
+#img{
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    margin-top: 10px;
+}
+
+div{
+    width:10%;
+    position:absolute;
+    right:0px;
+    text-align: left;
+    margin-top: 15px;
+    margin-right: 10 px;
+}
+
+form{
+    position: absolute; 
+    left: 10px;
+    margin-top: 60px; 
+    float: left; 
+    padding-right: 30px;  
+}
+
+input{
+    width: 55%;
+}
+
+#searchBtn{
+    width: 25px;
+}
+
+div>label,button {
+    width:80%;   
+}
+
+a{
+    color:gray;
+    margin-top: 20px;
+}
+
+a:hover{
+    color:black;
+    cursor: pointer;
+}

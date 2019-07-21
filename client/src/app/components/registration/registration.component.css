@@ -1,0 +1,80 @@
+form{
+    margin:auto;
+    background-color: lightgreen;
+    width: 80%;
+    border:1px solid black;
+    text-align: left;
+    height: 100%;
+}
+
+form > div{
+    float: left;
+    margin-top: 40px;
+}
+
+form >h1{
+    margin-left: 23px;
+}
+
+#left{
+    width:50%;
+    position: relative;
+    left:0px;
+}
+
+#right{
+    width:50%;
+    position: relative;
+    right:0px;
+}
+
+div>input,select{
+    float:right;
+}
+
+input{
+    width: 250px;
+    height: 25px;
+    font-size: x-large;
+}
+
+select{
+    width: 255px;
+    height: 33px;
+    font-size: x-large;
+    margin-right:100px;
+}
+
+label{
+    width: 100px;
+    height: 25px;
+    font-size: x-large;
+    margin-left:25px;
+    float: left;
+    margin-right: 15px;
+}
+
+span {
+    color: red;
+    text-align: left;
+    position: absolute;
+    margin: 10px;
+}
+
+.ng-invalid.ng-touched:not(form) >input {
+    border: 2px solid red;
+}
+
+button{
+    border: 1px solid grey;
+    height: 35px;
+    width:120px;
+    text-align: center;
+    position: absolute;
+    right:220px;
+    bottom: 20px;
+    font-size: x-large;
+}
+
+
+

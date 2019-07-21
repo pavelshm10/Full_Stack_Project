@@ -1,0 +1,26 @@
+section{
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* section > app-cart
+{ 
+    border: 1px solid black;
+    margin-top: 5px;
+    grid-column: span 4;
+    background-color: lightgreen;
+} */
+
+section > *
+{ 
+    border: 1px solid black;
+    margin-top: 5px;
+    background-color: lightgreen;
+}
+
+app-cart { grid-column: span 4; margin-right: 5px; }
+
+app-products { grid-column: span 8 }

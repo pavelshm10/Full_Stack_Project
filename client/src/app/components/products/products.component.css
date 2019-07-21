@@ -1,0 +1,31 @@
+
+
+/* div {
+    height: 90%;
+    overflow: auto;
+    margin: 20px;
+    display: inline-block;
+}
+
+table, th, td {
+    border: 1px solid blue;
+    font-size: x-large;
+}
+
+tr:nth-of-type(even) {
+    background-color: lightpink;
+}
+
+tr:nth-of-type(odd) {
+    background-color: lightseagreen;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+img {
+    position: absolute;
+    right: 20px;
+    top: 120px;
+} */

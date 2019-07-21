@@ -1,0 +1,28 @@
+
+<form #myForm="ngForm">
+    <button *ngIf="resumeShoping" routerLink="/shopping" (click)="shopping()"> Resume Shopping</button>
+    <button *ngIf="startShoping" [disabled]="!isLogIn"  routerLink="/shopping"> Start Shopping</button>
+    <br><br>
+    
+    <mat-form-field>    
+        <input #mail="ngModel"  matInput type="email" name="mail" email [(ngModel)]="credentials.mail" placeholder="Mail">
+    </mat-form-field>
+    <br>
+    <span *ngIf="mail.errors?.email && mail.touched">Mail is not valid, please correct.</span> 
+    <br><br>
+
+    <mat-form-field>
+        <input #password="ngModel"  matInput pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}"  minlength="3" type="password" name="password" [(ngModel)]="credentials.password" placeholder="Password">
+    </mat-form-field>
+    <br>
+    <span *ngIf="password.errors?.pattern || password.errors?.minlength">Password is not valid, must consist of at least 7 <br> charchters of: a-z,0-9.</span> 
+    <br><br><br><br>
+
+    <mat-checkbox>Remember Me (not working yet...)</mat-checkbox>
+    <br><br> 
+
+    <button  id="btnLogin" mat-button (click)="login()">Login</button>
+    <!-- *ngIf="!isLogIn" -->
+    <a *ngIf="!isLogIn" routerLink="/registration">Sign up</a>
+</form>
+

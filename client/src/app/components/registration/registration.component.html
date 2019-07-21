@@ -1,0 +1,86 @@
+  <form #myForm="ngForm">   
+    <h1>Registration Form</h1>
+    <div id="left" class="form-group">     
+      <label>ID </label>
+      <mat-form-field>   
+        <input matInput  type="text" name="_id" #_id="ngModel" [(ngModel)]="customer._id" minlength="7" placeholder="*" required>  
+      </mat-form-field> 
+          <span *ngIf="_id.errors?.required && _id.touched">Missing ID.</span>
+          <span *ngIf="_id.errors?.minlength && _id.touched">ID must consist of at list 7 charcters.</span>    
+      <br><br>        
+      
+      <label>Email  </label>  
+      <mat-form-field>    
+        <input matInput type="email" email name="mail" #mail="ngModel" [(ngModel)]="customer.mail" placeholder="*" required> 
+      </mat-form-field>      
+        <span *ngIf="mail.errors?.required && mail.touched">Mail is missing.</span>  
+        <span *ngIf="mail.errors?.email && mail.touched">Mail is not valid, please correct.</span>  
+        <br><br>
+      
+      <label>Password</label>
+      <mat-form-field>    
+        <input matInput type="password" name="password" (input)="confirmPassword.control.updateValueAndValidity()" #password="ngModel" [(ngModel)]="customer.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}" minlength="3" placeholder="*" required>
+      </mat-form-field>    
+        <span *ngIf="password.errors?.required && password.touched">Password is missing.</span>
+        <span *ngIf="password.errors?.pattern || password.errors?.minlength">Password is not valid, must consist of at least 7 <br> charchters of: a-z,0-9.</span> 
+      <br><br>
+      
+      <label>Confirm <br> Password </label>
+      <mat-form-field>      
+        <input matInput type="password" appValidatePassword="password" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="customer.confirmpassword" placeholder="*" required>
+      </mat-form-field>      
+        
+        <span *ngIf="confirmPassword.errors?.required && confirmPassword.touched">Please confirm the password.</span> 
+        <span *ngIf="confirmPassword.touched && confirmPassword.errors?.notEqual && !confirmPassword.errors?.required">Passowrd and confirm password is not match.</span>
+        <br><br>
+        <p><strong>**All fileds are required</strong></p>
+    </div> 
+
+    <div id="right" class="form-group">
+      <label>City </label>
+      <mat-form-field>
+        <mat-select #city="ngModel"  name="city" placeholder="Choose city..." [(ngModel)]="customer.city" required>
+          <mat-option *ngFor="let c of allCities" value="c.cityName">
+                {{ c.cityName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+        <span *ngIf="city.errors?.required && city.touched">Missing city name.</span>
+      <br><br>
+      
+      <label>Sreet</label>
+      <mat-form-field>   
+        <input matInput  #street="ngModel" type="text" name="street" [(ngModel)]="customer.street" placeholder="*" required>
+      </mat-form-field> 
+        <span *ngIf="street.errors?.required && street.touched">Missing street address.</span>
+      <br><br>
+      
+      <label>Name</label>
+      <mat-form-field> 
+        <input matInput #fname="ngModel" type="text" name="fname" [(ngModel)]="customer.fname" placeholder="*" required>
+      </mat-form-field> 
+        <span *ngIf="fname.errors?.required && fname.touched">Missing first name.</span>
+      <br><br>
+
+      <label>Last Name</label>
+      <mat-form-field> 
+        <input matInput #lname="ngModel" type="text" name="lname" [(ngModel)]="customer.lname" placeholder="*" required>
+      </mat-form-field> 
+        <span *ngIf="lname.errors?.required && lname.touched">Missing last name.</span>
+      <br><br> 
+    </div>
+    <button mat-button [disabled]="myForm.form.invalid" (click)="send()">SUBMIT</button> 
+  </form>
+     
+        
+      
+        
+
+       
+    
+      
+  
+
+
+
+ 

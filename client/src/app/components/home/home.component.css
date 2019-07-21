@@ -1,0 +1,58 @@
+section{
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+section > * 
+{ 
+    border: 1px solid black;
+    margin: 10px;
+    grid-column: span 4;
+    background-color: lightgreen;
+}
+
+/* section > * { border: 2px solid black; }
+
+header { grid-column: span 12 } */
+
+/* div:nth-of-type(1) {
+    position: absolute;
+    border: 1px solid black;
+    padding: 10px;
+    right: 20px;
+    top: 120px;
+}
+
+div:nth-of-type(2) {
+    position: absolute;
+    border: 1px solid black;
+    padding: 10px;
+    right: 20px;
+    top: 300px;
+}
+
+input[type="range"] {
+    appearance: none;
+    height: 6px;
+    border-radius: 6px;
+    background-color: brown;
+}
+
+.greenApples {
+    color: green;
+}
+
+.yellowBanana {
+    color: yellow;
+}
+
+.bolded {
+    font-weight: bold;
+}
+
+.underlined {
+    text-decoration: underline;
+} */

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<app-thumbnail id="img" imageSource="/assets/images/cart.jpg" width="100" height="60"></app-thumbnail>
+
+<form class="example" *ngIf="shopping">
+  <label>Search product &nbsp;</label>
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit" (click)="search()" id="searchBtn"><i class="fa fa-search"></i></button>
+</form>
+
+<div>
+    <button >Contact </button><br>
+    <label *ngIf="login">Hello {{fname}}</label><br>
+    <a role="button" (click)="logout()" *ngIf="login"><i>Log-out</i></a>
+</div>
+
+
+<!-- routerLink="/shopping" -->
+<!-- <div>
+<h1 colored="1000">Northwind Website</h1>
+<h5 *ngIf="totalProducts">Total Products: {{ totalProducts }}</h5>
+</div> -->
